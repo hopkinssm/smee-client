@@ -41,6 +41,8 @@ class Client {
     const mergedQuery = Object.assign(target.query, data.query)
     target.search = querystring.stringify(mergedQuery)
 
+    delete data.host
+    
     delete data.query
 
     const req = superagent.post(url.format(target)).send(data.body)
