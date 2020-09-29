@@ -41,7 +41,7 @@ class Client {
     const mergedQuery = Object.assign(target.query, data.query)
     target.search = querystring.stringify(mergedQuery)
 
-    delete data.host
+    this.logger.info('${data.host} ==> ${target.host}')
     
     delete data.query
 
