@@ -42,7 +42,7 @@ class Client {
     target.search = querystring.stringify(mergedQuery)
 
     console.log('HOST:  ${data.host} ==> ${target.host} (${target.hostname})')
-    delete data.host
+    const data.host = target.hostname
     
     delete data.query
 
