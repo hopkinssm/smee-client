@@ -81,7 +81,7 @@ class Client {
     events.addEventListener('open', this.onopen.bind(this))
     events.addEventListener('error', this.onerror.bind(this))
 
-    this.logger.info(`Forwarding ${this.source} to ${this.target}`)
+    this.logger.info(`Forwarding ${this.source} to ${this.target} - 1`)
     this.events = events
 
     return events
